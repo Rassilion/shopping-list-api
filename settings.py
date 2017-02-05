@@ -6,11 +6,11 @@ if os.environ.get('PORT') is None:
     DEBUG = True
 
 # database settings, defaults to locals
-MONGO_HOST = os.environ.get('MONGO_HOST', 'localhost')
-MONGO_PORT = os.environ.get('MONGO_PORT', 27017)
-MONGO_USERNAME = os.environ.get('MONGO_USERNAME', 'user')
-MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', 'user')
-MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'evedemo')
+MONGO_HOST = os.environ.get('MONGO_HOST', 'ds143449.mlab.com')
+MONGO_PORT = os.environ.get('MONGO_PORT', 43449)
+MONGO_USERNAME = os.environ.get('MONGO_USERNAME', 'user1')
+MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', 'iamthe1')
+MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'shopping_list_db')
 
 # Enable reads (GET), inserts (POST) and DELETE for resources/collections
 # (if you omit this line, the API will default to ['GET'] and provide
