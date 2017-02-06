@@ -1,7 +1,5 @@
-from domain import people
-from domain import works
+from domain import lists
 
 DOMAIN = {
-    'people': people.definition,
-    'works': works.definition,
+    'lists': lists.definition,
 }
