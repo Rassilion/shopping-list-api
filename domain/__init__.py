@@ -1,5 +1,5 @@
-from domain import lists
+from domain import items
 
 DOMAIN = {
-    'lists': lists.definition,
+    'items': items.definition,
 }
