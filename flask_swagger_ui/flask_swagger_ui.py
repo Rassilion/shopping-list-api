@@ -6,8 +6,7 @@ def get_swaggerui_blueprint(base_url, api_url, config=None):
     swagger_ui = Blueprint('swagger_ui',
                            __name__,
                            static_folder='ui',
-                           template_folder='templates',
-                           static_url_path='/doc')
+                           template_folder='templates')
 
     default_config = {
         'client_realm': 'null',
