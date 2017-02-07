@@ -1,6 +1,6 @@
 import os
 from eve import Eve
-from flask_swagger_ui import get_swaggerui_blueprint
+from flask_swagger_ui.flask_swagger_ui import get_swaggerui_blueprint
 from eve_swagger import swagger
 
 # Load the settings file using a robust path so it works when
