@@ -1,13 +1,13 @@
-import os
 import json
-from flask import Blueprint, send_from_directory, render_template
+from flask import Blueprint, render_template
 
 
 def get_swaggerui_blueprint(base_url, api_url, config=None):
     swagger_ui = Blueprint('swagger_ui',
                            __name__,
                            static_folder='ui',
-                           template_folder='templates')
+                           template_folder='templates',
+                           static_url_path='/doc')
 
     default_config = {
         'client_realm': 'null',
@@ -38,18 +38,7 @@ def get_swaggerui_blueprint(base_url, api_url, config=None):
     }
 
     @swagger_ui.route('/')
-    @swagger_ui.route('/<path:path>')
-    def show(path=None):
-        if not path or path == 'index.html':
-            return render_template('index.template.html', **fields)
-        else:
-            return send_from_directory(
-                # A bit of a hack to not pollute the default /static path
-                os.path.join(
-                    swagger_ui.root_path,
-                    swagger_ui._static_folder
-                ),
-                path
-            )
+    def show():
+        return render_template('index.template.html', **fields)
 
     return swagger_ui
