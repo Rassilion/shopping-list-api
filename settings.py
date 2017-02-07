@@ -28,6 +28,18 @@ CACHE_EXPIRES = 20
 
 XML = False
 
+# swagger information
+SWAGGER_INFO = {
+    'title': 'ShoppingList Api',
+    'version': '0.1',
+    'description': 'an API description',
+    'termsOfService': '',
+    'contact': {
+        'name': 'fregram',
+        'url': 'http://fregram.com'
+    }
+}
+
 # The DOMAIN dict explains which resources will be available and how they will
 # be accessible to the API consumer.
 DOMAIN = domain.DOMAIN
